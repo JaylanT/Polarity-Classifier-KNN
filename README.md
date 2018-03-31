@@ -1,8 +1,7 @@
 # Polarity-Classifier-KNN
 CMPE-139 Program 1
 
-84% accuracy with Jaccard similarity
-Cosine similarity not tested
+84% accuracy with Jaccard similarity. Cosine similarity not tested.
 
 Running:
 
