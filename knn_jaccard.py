@@ -63,6 +63,8 @@ def tokenize(stop_words, doc):
 
 
 def format_data(train_df, test_df, pool):
+    stop_words = set(pd.read_csv('stop_words.txt', header=None, sep='\n', squeeze=True).values)
+
     tokenized_train_doc = pool.map(partial(tokenize, stop_words), train_df['doc'])
     tokenized_test_doc = pool.map(partial(tokenize, stop_words), test_df['doc'])
 
@@ -86,10 +88,9 @@ def save(data):
 
 if __name__ == "__main__":
     pool = Pool(processes=None)
-    stop_words = set(pd.read_csv('stop_words.txt', header=None, sep='\n', squeeze=True).values)
 
     if len(sys.argv) < 3:
-        print('Missing arguments.\nex: ./pr1.py train.dat test.dat results.txt(optional)')
+        print('Missing arguments.\nex: ./knn_jaccard.py train.dat test.dat results.txt(optional)')
         sys.exit(1)
 
     train_fname = sys.argv[1]

@@ -90,7 +90,7 @@ if __name__ == "__main__":
     pool = Pool(processes=None)
 
     if len(sys.argv) < 3:
-        print('Missing arguments.\nex: ./knn.py train.dat test.dat results.txt(optional)')
+        print('Missing arguments.\nex: ./knn_cosine.py train.dat test.dat results.txt(optional)')
         sys.exit(1)
 
     train_fname = sys.argv[1]
