@@ -1,6 +1,9 @@
 # Polarity-Classifier-KNN
 CMPE-139 Program 1
 
-Run using:
+84% accuracy with Jaccard similarity
+Cosine similarity not tested
 
-./knn.py train.dat test.dat out_file
+Running:
+
+./knn_algo.py train.dat test.dat out_file
